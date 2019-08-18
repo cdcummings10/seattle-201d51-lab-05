@@ -81,7 +81,7 @@ function sumArray(sumArr) { //eslint-disable-line
   // var a = sumArr.shift();
   // var b = sumArr.shift();
   // var c = sumArr.shift();
-  var sum1 = sum(sumArr[0], sumArr[1], sumArr[2]);
+  var sum1 = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2]);
   var message = sumArr[0] + ',' + sumArr[1] + ',' + sumArr[2] + ' was passed in as an array of numbers, and ' + sum1[0] + ' is their sum.';
   return[sum1[0], message];
 }
@@ -107,7 +107,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  var product1 = multiply(multArr[0], multArr[1], multArr[2]);
+  var product1 = multiply(multiply(multArr[0], multArr[1])[0], multArr[2]);
   var message = 'The numbers ' + multArr[0] + ',' + multArr[1] + ',' + multArr[2] + ' have a product of ' + product1[0] + '.';
   return[product1[0], message];
 }
